@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<script src="https://kit.fontawesome.com/66f912f910.js" crossorigin="anonymous"></script>
+<style>
+    button{
+        background: linear-gradient(grey,white);
+        border-radius: 25%;
+        font-size: 20px;
+        height: 80px;
+    }
+    body{
+        background:skyblue;
+        position: relative;
+        left: 200px;
+    }
+    .calc{
+        background: linear-gradient(white,black,grey,black,white);
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto ;
+        width: 300px;
+        border-radius: 05px;
+    
+    }
+    input{
+        height: 60px;
+        background:linear-gradient(gray,white);
+        font-size: 30px;
+        border: 03px solid black;
+        
+    }
+
+</style>
+<body>
+    <input style="color:black; width: 293px;" type="text" id="calc">
+    <div class="calc">
+
+    <button  onclick="one()">1</button>
+    <button  onclick="two()">2</button>
+    <button  onclick="three()">3</button>
+    <button  onclick="four()">4</button>
+    <button  onclick="five()">5</button>
+    <button  onclick="six()">6</button>
+    <button  onclick="seven()">7</button>
+    <button  onclick="eight()">8</button>
+    <button  onclick="nine()">9</button>
+    <button  onclick="zero()">0</button>
+    <button  onclick="pl()">+</button>
+    <button  onclick="sub()">-</button>
+    <button  onclick="mul()">*</button>
+    <button  onclick="div()">/</button>
+    <button  onclick="eva()" >=</button>
+    <button  onclick="clr()"><i class="fa-solid fa-delete-left"></i></button>
+
+    </div>
+    
+
+    <script>
+       
+        function one(){
+            document.getElementById("calc").value +=1;
+        }
+    function two(){
+            document.getElementById("calc").value +=2;
+        }
+
+        function three(){
+            document.getElementById("calc").value +=3;
+        }
+
+        function four(){
+            document.getElementById("calc").value +=4;
+        }
+
+        function five(){
+            document.getElementById("calc").value +=5;
+        }
+
+        function six(){
+            document.getElementById("calc").value +=6;
+        }
+        function seven(){
+            document.getElementById("calc").value +=7;
+        }
+        function eight(){
+            document.getElementById("calc").value +=8;
+        }
+
+        function nine(){
+            document.getElementById("calc").value +=9;
+        }
+
+        function zero(){
+            document.getElementById("calc").value +=0;
+        }
+
+        function pl(){
+            document.getElementById("calc").value +="+";
+        }
+
+        function sub(){
+            document.getElementById("calc").value +="-";
+        }
+
+        function mul(){
+            document.getElementById("calc").value +="*";
+        }
+
+        function div(){
+            document.getElementById("calc").value +="/";
+        }
+
+        function eva(){
+            var eva= document.getElementById("calc").value;
+            document.getElementById("calc").value = eval(eva);
+        }
+        function clr(){
+           var clear= document.getElementById("calc").value;
+           document.getElementById('calc').value = clear.slice(0,-1);
+        }
+
+        
+        
+
+
+    </script>
+    
+    
+</body>
+</html>
